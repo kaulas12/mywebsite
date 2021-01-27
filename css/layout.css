@@ -1,0 +1,792 @@
+/*
+=====================================================================
+*   Ceevee v1.0 Layout Stylesheet
+*   url: styleshout.com
+*   03-18-2014
+=====================================================================
+
+   TOC:
+   a. General Styles
+   b. Header Styles
+   c. About Section
+   d. Resume Section
+   e. Portfolio Section
+   f. Call To Action Section
+   g. Testimonials Section
+   h. Contact Section
+   i. Footer
+
+===================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* a. General Styles
+/* ------------------------------------------------------------------ */
+
+/* TODO: If you want to change the color of the footer background,
+   change this to whatever color you want. You can either type in the name
+   of the color (i.e. white) or the hexadecimal code associated with the color,
+   which is what is currently being used. To find the hexadecimal code associated
+   with the particular shade of color you want, visit this link:
+
+   https://www.w3schools.com/colors/colors_picker.asp
+*/
+body { background: #0f0f0f; }
+
+/* ------------------------------------------------------------------ */
+/* b. Header Styles
+/* ------------------------------------------------------------------ */
+
+header {
+   position: relative;
+   height: 800px;
+   min-height: 500px;
+   width: 100%;
+   /* TODO: If you want to change the background of the header, which should
+      originally be a desert, simply change the background property of this header.
+      
+      To link it to your own background image, insert the path to your image inside
+      url( ), as done below. Note that layout.css is located in a different folder than
+      index.html; currently, the path we put tells our CSS file to start at the folder
+      in which is is located, look one folder up (which is what the .. means), and then
+      go into the images folder to find the file header-background.jpg. If you navigate
+      your files this exact same way, you will find the picture that this is using. Simply
+      drop your background image in that folder and change header-background.jpg to 
+      the name of your background image file (i.e. my_background.jpg)
+
+      To just display a single color as the background instead, omit url(../images/header-background.jpg)
+      and change the #161415 to the color that you want, either in words or in hexadecimal form as
+      described above. 
+
+      For example,
+
+      background: {YOUR CODE HERE} no-repeat top center;
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+   https://www.w3schools.com/colors/colors_picker.asp
+*/
+   background: #161415 url(../images/header-background.jpg) no-repeat top center;
+   background-size: cover !important;
+	-webkit-background-size: cover !important;
+   text-align: center;
+   overflow: hidden;
+}
+
+/* vertically center banner section */
+header:before {
+   content: '';
+   display: inline-block;
+   vertical-align: middle;
+   height: 100%;
+}
+header .banner {
+   display: inline-block;
+   vertical-align: middle;
+   margin: 0 auto;
+   width: 85%;
+   padding-bottom: 30px;s
+   text-align: center;
+}
+
+header .banner-text { width: 100%; }
+header .banner-text h1 {
+   font: 90px/1.1em 'opensans-bold', sans-serif;
+   /* TODO: If you want to change the color of the "I'm John Doe" text, change the
+      color property below to either the word of the color you want or the hexadecimal
+      code for the color and shade that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: white;
+   letter-spacing: -2px;
+   margin: 0 auto 18px auto;
+   text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+}
+header .banner-text h3 {
+   font: 18px/1.9em 'librebaskerville-regular', serif;
+   /* TODO: If you want to change the color of the text that comes after "I'm John Doe",
+      change the color property below to either the word of the color you want or 
+      the hexadecimal code for the color and shade that you want.
+
+      Note that this will not change the color of the text that is within <span> 
+       or <a> elements. The option to change that is located below.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #A8A8A8;
+   margin: 0 auto;
+   width: 70%;
+   text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+}
+header .banner-text h3 span,
+header .banner-text h3 a {
+   /* TODO: If you want to change the color of <span> and <a> the text that comes 
+      after "I'm John Doe", change the color property below to either the word of the color you want or 
+      the hexadecimal code for the color and shade that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: white;
+}
+header .banner-text hr {
+   width: 60%;
+   margin: 18px auto 24px auto;
+   border-color: #2F2D2E;
+   border-color: rgba(150, 150, 150, .1);
+}
+
+/* header social links */
+header .social {
+   margin: 24px 0;
+   padding: 0;
+   /* TODO: If you want to change the size of the social media icons, change the
+   font-size property to the size you want followed by px (px = pixels, the standard
+   way in which our computer measures the size of certain objects)
+
+   For example, if you want to make the icons twice the size they currently are:
+
+   font-size: 60px;
+   */
+   font-size: 30px;
+   text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+}
+header .social li {
+   display: inline-block;
+   margin: 0 15px;
+   padding: 0;
+}
+header .social li a { 
+   /* TODO: If you want to change the default color of the social media icons, 
+      change the color property below to either the word of the color you want or 
+      the hexadecimal code for the color and shade that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #fff; 
+}
+header .social li a:hover { 
+   /* TODO: If you want to change the color of the social media icons when you hover
+      your mouse over them, change the color property below to either the word of 
+      the color you want or the hexadecimal code for the color and shade that 
+      you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #11ABB0; 
+}
+
+/* scrolldown link */
+header .scrolldown a {
+   position: absolute;
+   bottom: 30px;
+   left: 50%;
+   margin-left: -29px;
+   /* TODO: If you want to change the default color of the scroll-down arrow, 
+      change the color property below to either the word of the color you want or 
+      the hexadecimal code for the color and shade that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #fff;
+   display: block;
+   height: 42px;
+   width: 42px;
+   font-size: 42px;
+   line-height: 42px;
+   color: #fff;
+   border-radius: 100%;
+
+   -webkit-transition: all .3s ease-in-out;
+   -moz-transition: all .3s ease-in-out;
+   -o-transition: all .3s ease-in-out;
+   transition: all .3s ease-in-out;
+}
+header .scrolldown a:hover { 
+   /* TODO: If you want to change the color of the scroll-down arrow when you hover
+      your mouse over it, change the color property below to either the word of 
+      the color you want or the hexadecimal code for the color and shade that 
+      you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #11ABB0; 
+}
+
+/* primary navigation
+--------------------------------------------------------------------- */
+#nav-wrap ul, #nav-wrap li, #nav-wrap a {
+	 margin: 0;
+	 padding: 0;
+	 border: none;
+	 outline: none;
+}
+
+/* nav-wrap */
+#nav-wrap {
+   font: 12px 'opensans-bold', sans-serif;
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   margin: 0 auto;
+   z-index: 100;
+   position: fixed;
+   left: 0;
+   top: 0;
+}
+.opaque { 
+   /* TODO: If you want to change the background-color of the categories on top,
+      when you scroll down, change the color property below to either the word of 
+      the color you want or the hexadecimal code for the color and shade that 
+      you want.
+
+      Try changing this value to something like "yellow" and scroll down in the page
+      to see what this means.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   background-color: #333; 
+}
+
+/* hide toggle button */
+#nav-wrap > a.mobile-btn { display: none; }
+
+ul#nav {
+   min-height: 48px;
+   width: auto;
+
+   /* center align the menu */
+   text-align: center;
+}
+ul#nav li {
+   position: relative;
+   list-style: none;
+   height: 48px;
+   display: inline-block;
+}
+
+/* Links */
+ul#nav li a {
+
+/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
+
+   display: inline-block;
+   padding: 8px 13px;
+   line-height: 32px;
+	text-decoration: none;
+   text-align: left;
+   /* TODO: If you want to change the default color of the categories on top,
+      change the color property below to either the word of the color you want or 
+      the hexadecimal code for the color and shade that you want.
+
+      Note that this will not change the color of the text that is within <span> 
+       or <a> elements. The option to change that is located below.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #fff;
+
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+}
+
+ul#nav li a:active { 
+   background-color: transparent !important; 
+}
+
+ul#nav li.current a {
+   /* TODO: If you want to change the default color of the selected category on top,
+      change the color property below to either the word of the color you want or 
+      the hexadecimal code for the color and shade that you want.
+
+      Note that this will not change the color of the text that is within <span> 
+       or <a> elements. The option to change that is located below.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #F06000; 
+}
+
+
+/* ------------------------------------------------------------------ */
+/* c. About Section
+/* ------------------------------------------------------------------ */
+
+#about {
+   /* TODO: If you want to change the background color of the about section,
+      change the background property below to either the word of the color you want or
+      the hexadecimal code for the color and shade that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   background: #2B2B2B;
+   padding-top: 96px;
+   padding-bottom: 66px;
+   overflow: hidden;
+}
+
+#about a, #about a:visited  { 
+   /* TODO: If you want to change the color of links in the about section (the phone
+      number, email, and download resume button), change the color property below to 
+      either the word of the color you want or the hexadecimal code for the color 
+      and shade that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #fff; 
+}
+#about a:hover, #about a:focus { 
+   /* TODO: If you want to change the color of links in the about section (the phone
+      number, email, and download resume button) when you hover over them, change 
+      the color property below to either the word of the color you want or the 
+      hexadecimal code for the color and shade that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #11ABB0; 
+}
+
+#about h2 {
+   font: 22px/30px 'opensans-bold', sans-serif;
+   /* TODO: If you want to change the color of the titles in the about section 
+      change the color property below to either the word of the color you want or
+      the hexadecimal code for the color and shade that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #fff;
+   margin-bottom: 12px;
+}
+#about p {
+   line-height: 30px;
+   /* TODO: If you want to change the color of the text in the about section 
+      change the color property below to either the word of the color you want or
+      the hexadecimal code for the color and shade that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #7A7A7A;
+}
+#about .profile-pic {
+   position: relative;
+   width: 120px;
+   height: 120px;
+   border-radius: 100%;
+}
+#about .contact-details { width: 41.66667%; }
+#about .download {
+   width: 58.33333%;
+   padding-top: 6px;
+}
+#about .main-col { padding-right: 5%; }
+#about .download .button {
+   margin-top: 6px;
+   background: #444;
+}
+#about .download .button:hover {
+   background: #fff;
+   color: #2B2B2B;
+}
+#about .download .button i {
+   margin-right: 15px;
+   font-size: 20px;
+}
+
+/* ------------------------------------------------------------------ */
+/* d. Education Section
+/* ------------------------------------------------------------------ */
+
+.resume {
+   /* TODO: If you want to change the background color of the resume section, 
+      change the background property below to either the word of the color you want or
+      the hexadecimal code for the color and shade that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   background: #fff;
+   padding-top: 90px;
+   padding-bottom: 0px;
+   overflow: hidden;
+}
+
+.resume a, .resume a:visited  { 
+   /* TODO: If you add any links to different things in the resume section, 
+      change the color property below to either the word of the color you want or
+      the hexadecimal code for the color and shade that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #11ABB0; 
+}
+.resume a:hover, .resume a:focus {
+   /* TODO: If you add any links to different things in the resume section, 
+      change the color property below to either the word of the color you want or
+      the hexadecimal code for the color and shade that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #313131; 
+}
+
+.resume h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+.resume h1 span {
+   /* TODO: If you want to change the underline color in the resume section, 
+      change part of the border-bottom property below to either the word of 
+      the color you want or the hexadecimal code for the color and shade that 
+      you want.
+
+      You can also optionally change the size and type of the underline.
+
+      For example, if you want an orange underline that is 10px big 
+      and is a dotted line, you would do:
+
+      border-bottom: 1px dotted orange;
+
+      You can also change how far away the underline is from the title of the
+      category by changing the padding-bottom property. The bigger you make the
+      padding, the lower the bar will be situated.
+
+      To understand how this works, try changing padding-bottom to 100px.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   border-bottom: 3px solid #11ABB0;
+   padding-bottom: 6px;
+}
+.resume h3 {
+   font: 25px/30px 'opensans-bold', sans-serif;
+}
+
+.resume .header-col {
+   padding-top: 9px; 
+}
+
+.resume .main-col { 
+   padding-right: 10%; 
+}
+
+.resume .info {
+   font: 16px/24px 'librebaskerville-italic', serif;
+   /* TODO: If you want to change the color of the text with the bullet point in 
+      the resume section, change the color property below to either the word 
+      of the color you want or the hexadecimal code for the color and shade 
+      that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #6E7881;
+   margin-bottom: 18px;
+   margin-top: 9px;
+}
+
+.resume .info span {
+   margin-right: 5px;
+   margin-left: 5px;
+}
+.resume .date {
+   font: 15px/24px 'opensans-regular', sans-serif;
+   margin-top: 6px;
+}
+
+
+/*----------------------------------------------*/
+/*	Skill Bars
+/*----------------------------------------------*/
+
+.bars {
+	width: 95%;
+	float: left;
+	padding: 0;
+	text-align: left;
+}
+.bars .skills {
+  	margin-top: 36px;
+   list-style: none;
+}
+.bars li {
+   position: relative;
+  	margin-bottom: 60px;
+   /* TODO: If you want to change the background color of the bars in your
+      resume section, change the background property below to either the word 
+      of the color you want or the hexadecimal code for the color and shade 
+      that you want.
+
+      You can also change the height of the bar by changing the height property, 
+      but if you do make sure to change the line-height property below under
+      .bars-expand.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+  	background: #ccc;
+  	height: 42px;
+  	border-radius: 3px;
+}
+.bars li em {
+	font: 15px 'opensans-bold', sans-serif;
+   /* TODO: If you want to change the titles (i.e. Photoshop) of the bars in your
+      resume section, change the color property below to either the word 
+      of the color you want or the hexadecimal code for the color and shade 
+      that you want.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #313131;
+	text-transform: uppercase;
+   letter-spacing: 2px;
+	font-weight: normal;
+   position: relative;
+	top: -36px;
+}
+.bar-expand {
+   position: absolute;
+   left: 0;
+   top: 0;
+
+   margin: 0;
+   padding-right: 24px;
+   /* TODO: If you want to change the color of the bars in your
+      resume section, change the background property below to either the word 
+      of the color you want or the hexadecimal code for the color and shade 
+      that you want.
+
+      You can also change the height of the bar by changing the line-height property, 
+      but if you do make sure to change the height property above under
+      .bars li.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+  	background: #313131;
+   display: inline-block;
+  	height: 42px;
+   line-height: 42px;
+   border-radius: 3px 0 0 3px;
+}
+
+/* ------------------------------------------------------------------ */
+/* i. Footer
+/* ------------------------------------------------------------------ */
+
+footer {
+   padding-top: 48px;
+   margin-bottom: 48px;
+   /* TODO: If you want to change the color of the text in the footer, change
+      the color attribute to either the word of the color you want or the 
+      hexadecimal code for the color and shade that you want. 
+
+      Note this won't change the color of things that are in <a> 
+      elements. You can do that below.
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #303030;
+   font-size: 14px;
+   text-align: center;
+   position: relative;
+}
+
+footer a, footer a:visited { 
+   /* TODO: If you want to change the default color of the text in <a> in the footer, 
+      including the social media link colors, change the color attribute to either
+      the word of the color you want or the hexadecimal code for the color and 
+      shade that you want. 
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #525252; 
+}
+
+footer a:hover, footer a:focus {
+   /* TODO: If you want to change the hovered color of the text in <a> in the footer, 
+      including the social media link colors, change the color attribute to either
+      the word of the color you want or the  hexadecimal code for the color and 
+      shade that you want. 
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #fff; 
+}
+
+/* copyright */
+footer .copyright {
+    margin: 0;
+    padding: 0;
+ }
+footer .copyright li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+}
+.ie footer .copyright li {
+   display: inline;
+}
+footer .copyright li:before {
+    content: "\2022";
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #095153;
+}
+footer .copyright  li:first-child:before {
+    display: none;
+}
+
+/* social links */
+footer .social-links {
+   margin: 18px 0 30px 0;
+   padding: 0;
+   font-size: 30px;
+}
+footer .social-links li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-left: 42px;
+    color: #F06000;
+}
+
+footer .social-links li:first-child { margin-left: 0; }
+
+/* Go To Top Button */
+#go-top {
+	position: absolute;
+	top: -24px;
+   left: 50%;
+   margin-left: -30px;
+}
+#go-top a {
+   /* TODO: If you want to change the color of the go-to-top-arrow, you can do
+      one of two things:
+
+      1) change the background-color property to whatever color you want to make 
+         the actual color within the circle different
+
+      1) change the color property to whatever color you want to make the actual 
+         arrow in the circle a different color
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+	text-decoration: none;
+	border: 0 none;
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-color: #525252;
+
+	-webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+
+   color: #fff;
+   font-size: 21px;
+   line-height: 60px;
+ 	border-radius: 100%;
+}
+#go-top a:hover { 
+   /* TODO: If you want to change the color of the go-to-top-arrow when you are 
+      hovering over it, you can do one of two things:
+
+      1) change the background-color property to whatever color you want to make 
+         the actual color within the circle different
+
+      1) change the color property to whatever color you want to make the actual 
+         arrow in the circle a different color
+
+      For reference, the following link will help you find the hexadecimal code
+      associated with the particular color you want:
+
+      https://www.w3schools.com/colors/colors_picker.asp
+   */
+   color: #fff;
+   background-color: #0F9095; 
+}
+
